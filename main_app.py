@@ -15,37 +15,17 @@ stage_manager_enabled = False
 gestalt_path = Path.joinpath(Path.cwd(), "com.apple.MobileGestalt.plist")
 
 while running:
-    print("""\n\n\n\n
-                                                                      
-         ,--.                                                         
-       ,--.'|                                                 ___     
-   ,--,:  : |                                               ,--.'|_   
-,`--.'`|  ' :         ,--,                                  |  | :,'  
-|   :  :  | |       ,'_ /|  ,----._,.  ,----._,.            :  : ' :  
-:   |   \\ | :  .--. |  | : /   /  ' / /   /  ' /   ,---.  .;__,'  /   
-|   : '  '; |,'_ /| :  . ||   :     ||   :     |  /     \\ |  |   |    
-'   ' ;.    ;|  ' | |  . .|   | .\\  .|   | .\\  . /    /  |:__,'| :    
-|   | | \\   ||  | ' |  | |.   ; ';  |.   ; ';  |.    ' / |  '  : |__  
-'   : |  ; .':  | : ;  ; |'   .   . |'   .   . |'   ;   /|  |  | '.'| 
-|   | '`--'  '  :  `--'   \\`---`-'| | `---`-'| |'   |  / |  ;  :    ; 
-'   : |      :  ,      .-./.'__/\\_: | .'__/\\_: ||   :    |  |  ,   /  
-;   |.'       `--`----'    |   :    : |   :    : \\   \\  /    ---`-'   
-'---'                       \\   \\  /   \\   \\  /   `----'              
-                             `--`-'     `--`-'                        
-    """)
-    print("by LeminLimez")
+    print("OliTheRepair Dude A12+ open menu save activation ticket")
+    print("Exploit by LeminLimez")
     print("v1.0\n\n")
     
     if not passed_check and Path.exists(gestalt_path) and Path.is_file(gestalt_path):
         passed_check = True
     
     if passed_check:
-        print(f"1. {"[Y] " if dynamic_island_enabled else ""}Toggle Dynamic Island")
-        print(f"2. {"[Y] " if current_model_name != "" else ""}Set Device Model Name")
-        print(f"3. {"[Y] " if boot_chime_enabled else ""}Toggle Boot Chime")
-        print(f"4. {"[Y] " if charge_limit_enabled else ""}Toggle Charge Limit")
-        print(f"5. {"[Y] " if stage_manager_enabled else ""}Toggle Stage Manager Supported")
-        print("\n9. Apply")
+        print("Backup activation ticket")
+        print("Restore activation ticket")
+
         print("0. Exit\n")
         page = int(input("Enter a number: "))
         if page == 1:
@@ -85,7 +65,7 @@ while running:
                 plistlib.dump(plist, out_fp)
             # restore to the device
             try:
-                restore_file(fp=gestalt_path, restore_path="/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/", restore_name="com.apple.MobileGestalt.plist")
+                restore_file(fp= , restore_path="/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/", restore_name="com.apple.MobileGestalt.plist")
                 input("Success! Reboot your device to see the changes.")
             except Exception as e:
                 print(traceback.format_exc())
